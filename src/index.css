@@ -199,70 +199,72 @@
 }
 
 /* ========================================================================= */
-/* 4. RETRO PRESET (Harmonious Warm Stone Neo-Brutalist — NO YELLOW)         */
+/* 4. RETRO PRESET (Retro Classic Denim: Ice-Blue Light / Midnight Navy Dark)*/
 /* ========================================================================= */
 [data-preset="retro"] {
-  --app-container: #eae6dd;
-  --main-color: #17171a;
-  --secondary-color: #52504c;
-  --primary: #d97706;
-  --link-color: #17171a;
+  --app-container: #dbeafe; /* Vintage Ice-Blue Frame */
+  --main-color: #0f172a;
+  --secondary-color: #334155;
+  --primary: #2563eb; /* Classic Royal Denim Blue */
+  --primary-foreground: #ffffff;
+  --link-color: #0f172a;
   --link-color-active: #ffffff;
-  --link-color-active-bg: #17171a;
-  --projects-section: #fcfbf8;
-  --inner-card-bg: #ffffff;
+  --link-color-active-bg: #2563eb;
+  --projects-section: #ffffff; /* Crisp White Workspace Canvas */
+  --inner-card-bg: #eff6ff; /* Soft Subtle Denim Frost Card Interior */
   --modal-bg: #ffffff;
-  --modal-input-bg: #f5f2eb;
-  --modal-border: #17171a;
-  --message-box-hover: #f5f2eb;
-  --message-box-border: #17171a;
-  --button-bg: #17171a;
+  --modal-input-bg: #eff6ff;
+  --modal-border: #0f172a;
+  --message-box-hover: #dbeafe;
+  --message-box-border: #0f172a;
+  --button-bg: #0f172a;
   --search-area-bg: #ffffff;
-  --border: #17171a;
-  --card: #ffffff;
-  --card-foreground: #17171a;
+  --border: #0f172a;
+  --card: #eff6ff;
+  --card-foreground: #0f172a;
 }
 
 .dark[data-preset="retro"],
 [data-preset="retro"].dark {
-  --app-container: #131211;
-  --main-color: #f7f4ed;
-  --secondary-color: #a8a39a;
-  --primary: #f59e0b;
-  --link-color: #f7f4ed;
-  --link-color-active: #131211;
-  --link-color-active-bg: #f59e0b;
-  --projects-section: #1c1a18;
-  --inner-card-bg: #272522;
-  --modal-bg: #1c1a18;
-  --modal-input-bg: #131211;
-  --modal-border: #f7f4ed;
-  --message-box-hover: #2e2b27;
-  --message-box-border: #f7f4ed;
-  --button-bg: #f59e0b;
-  --search-area-bg: #131211;
-  --border: #f7f4ed;
-  --card: #272522;
-  --card-foreground: #f7f4ed;
+  --app-container: #0b1120; /* Deep Midnight Ink Navy */
+  --main-color: #f8fafc;
+  --secondary-color: #94a3b8;
+  --primary: #38bdf8; /* Electric Sky Blue Accent */
+  --primary-foreground: #0b1120;
+  --link-color: #f8fafc;
+  --link-color-active: #0b1120;
+  --link-color-active-bg: #38bdf8;
+  --projects-section: #111b2e; /* Deep Midnight Denim Canvas */
+  --inner-card-bg: #16243b; /* Dark Navy Card Interior */
+  --modal-bg: #111b2e;
+  --modal-input-bg: #0b1120;
+  --modal-border: #60a5fa;
+  --message-box-hover: #1e314f;
+  --message-box-border: #60a5fa;
+  --button-bg: #38bdf8;
+  --search-area-bg: #0b1120;
+  --border: #60a5fa;
+  --card: #16243b;
+  --card-foreground: #f8fafc;
 }
 
-/* Retro Structural Containers & Inner Cards: Consistent Borders & Dropshadows */
+/* Retro Structural Containers & Inner Cards: Consistent 2px Borders & 4px Dropshadows */
 [data-preset="retro"] section,
 [data-preset="retro"] aside,
 [data-preset="retro"] .bg-\[var\(--projects-section\)\],
 [data-preset="retro"] .bg-\[var\(--inner-card-bg\)\] {
-  border: 2px solid #17171a !important;
-  box-shadow: 4px 4px 0px 0px #17171a !important;
-  border-radius: 12px !important;
+  border: 2px solid #0f172a !important;
+  box-shadow: 4px 4px 0px 0px #0f172a !important;
+  border-radius: 14px !important;
 }
 
 .dark[data-preset="retro"] section,
 .dark[data-preset="retro"] aside,
 .dark[data-preset="retro"] .bg-\[var\(--projects-section\)\],
 .dark[data-preset="retro"] .bg-\[var\(--inner-card-bg\)\] {
-  border: 2px solid #f7f4ed !important;
-  box-shadow: 4px 4px 0px 0px #f7f4ed !important;
-  border-radius: 12px !important;
+  border: 2px solid #60a5fa !important;
+  box-shadow: 4px 4px 0px 0px #60a5fa !important;
+  border-radius: 14px !important;
 }
 
 /* Retro Inner Elements & Radius Harmonization */
@@ -276,17 +278,17 @@
 [data-preset="retro"] input,
 [data-preset="retro"] .search-wrapper,
 [data-preset="retro"] select {
-  border: 2px solid #17171a !important;
+  border: 2px solid #0f172a !important;
   border-radius: 8px !important;
-  box-shadow: 2px 2px 0px 0px #17171a !important;
+  box-shadow: 2px 2px 0px 0px #0f172a !important;
 }
 
 .dark[data-preset="retro"] input,
 .dark[data-preset="retro"] .search-wrapper,
 .dark[data-preset="retro"] select {
-  border: 2px solid #f7f4ed !important;
+  border: 2px solid #60a5fa !important;
   border-radius: 8px !important;
-  box-shadow: 2px 2px 0px 0px #f7f4ed !important;
+  box-shadow: 2px 2px 0px 0px #60a5fa !important;
 }
 
 [data-preset="retro"] button {
