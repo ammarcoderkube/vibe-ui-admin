@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ========================================================================= */
+/* 1. DEFAULT PRESET (Minimalist Modern Purple/Indigo)                       */
+/* ========================================================================= */
+:root {
+  --preset-name: 'default';
+  --app-container: #f3f6fd;
+  --main-color: #1f1c2e;
+  --secondary-color: #5c6270;
+  --link-color: #1f1c2e;
+  --link-color-hover: #c3cff4;
+  --link-color-active: #ffffff;
+  --link-color-active-bg: #1f1c2e;
+  --projects-section: #ffffff;
+  --inner-card-bg: #f8fafc;
+  --message-box-hover: #f8fafc;
+  --message-box-border: #e2e8f0;
+  --more-list-bg: #ffffff;
+  --more-list-bg-hover: #f1f5f9;
+  --button-bg: #1f1c24;
+  --search-area-bg: #ffffff;
+  --star: #f59e0b;
+  --message-btn: #ffffff;
+  --modal-bg: #ffffff;
+  --modal-input-bg: #f8fafc;
+  --modal-border: #e2e8f0;
+
+  /* Vibe UI Kit Tokens */
+  --background: #f3f6fd;
+  --foreground: #1f1c2e;
+  --card: #ffffff;
+  --card-foreground: #1f1c2e;
+  --popover: #ffffff;
+  --popover-foreground: #1f1c2e;
+  --primary: #a855f7;
+  --primary-foreground: #ffffff;
+  --secondary: #27272a;
+  --secondary-foreground: #fafafa;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #f3e8ff;
+  --accent-foreground: #6b21a8;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #a855f7;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --app-container: #0f172a;
+  --main-color: #ffffff;
+  --secondary-color: rgba(255, 255, 255, 0.75);
+  --link-color: rgba(255, 255, 255, 0.75);
+  --link-color-hover: rgba(168, 85, 247, 0.2);
+  --link-color-active: #ffffff;
+  --link-color-active-bg: #a855f7;
+  --projects-section: #1e293b;
+  --inner-card-bg: #0f172a;
+  --message-box-hover: #273549;
+  --message-box-border: rgba(255, 255, 255, 0.08);
+  --more-list-bg: #1e293b;
+  --more-list-bg-hover: rgba(168, 85, 247, 0.15);
+  --button-bg: #334155;
+  --search-area-bg: #1e293b;
+  --star: #fbbf24;
+  --message-btn: rgba(168, 85, 247, 0.2);
+  --modal-bg: #1e293b;
+  --modal-input-bg: #0f172a;
+  --modal-border: #334155;
+
+  /* Vibe UI Kit Dark Tokens */
+  --background: #0f172a;
+  --foreground: #fafafa;
+  --card: #1e293b;
+  --card-foreground: #fafafa;
+  --popover: #1e293b;
+  --popover-foreground: #fafafa;
+  --primary: #a855f7;
+  --primary-foreground: #ffffff;
+  --secondary: #334155;
+  --secondary-foreground: #fafafa;
+  --muted: #0f172a;
+  --muted-foreground: #94a3b8;
+  --accent: #581c87;
+  --accent-foreground: #f3e8ff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #334155;
+  --input: #334155;
+  --ring: #a855f7;
+}
+
+/* ========================================================================= */
+/* 2. GLASS PRESET (Frosted Arctic Cyan / Sky Blue Aura)                      */
+/* ========================================================================= */
+[data-preset="glass"] {
+  --app-container: #e0f2fe;
+  --main-color: #0369a1;
+  --secondary-color: #0284c7;
+  --primary: #0284c7;
+  --link-color: #0369a1;
+  --link-color-active-bg: #0284c7;
+  --projects-section: rgba(255, 255, 255, 0.72);
+  --inner-card-bg: rgba(240, 249, 255, 0.6);
+  --modal-bg: rgba(255, 255, 255, 0.9);
+  --modal-input-bg: rgba(240, 249, 255, 0.7);
+  --search-area-bg: rgba(255, 255, 255, 0.8);
+  --message-box-hover: rgba(224, 242, 254, 0.5);
+  --message-box-border: rgba(186, 230, 253, 0.6);
+  --button-bg: #0284c7;
+}
+
+.dark[data-preset="glass"],
+[data-preset="glass"].dark {
+  --app-container: #030d1a;
+  --main-color: #f0f9ff;
+  --secondary-color: #bae6fd;
+  --primary: #38bdf8;
+  --link-color: #bae6fd;
+  --link-color-active-bg: #0284c7;
+  --projects-section: rgba(8, 28, 48, 0.65);
+  --inner-card-bg: rgba(3, 15, 28, 0.6);
+  --modal-bg: rgba(8, 28, 48, 0.92);
+  --modal-input-bg: rgba(3, 15, 28, 0.7);
+  --search-area-bg: rgba(12, 38, 64, 0.7);
+  --message-box-hover: rgba(14, 45, 75, 0.6);
+  --message-box-border: rgba(56, 189, 248, 0.18);
+  --button-bg: #0369a1;
+}
+
+[data-preset="glass"] section,
+[data-preset="glass"] aside {
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 12px 36px 0 rgba(2, 132, 199, 0.08) !important;
+}
+
+.dark[data-preset="glass"] section,
+.dark[data-preset="glass"] aside {
+  border: 1.5px solid rgba(56, 189, 248, 0.25) !important;
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5) !important;
+}
+
+/* ========================================================================= */
+/* 3. GLOW PRESET (Cyberpunk Deep Violet & Neon Magenta Aura)                 */
+/* ========================================================================= */
+[data-preset="glow"] {
+  --app-container: #faf5ff;
+  --main-color: #581c87;
+  --secondary-color: #7e22ce;
+  --primary: #9333ea;
+  --link-color: #581c87;
+  --link-color-active-bg: #9333ea;
+  --projects-section: #ffffff;
+  --inner-card-bg: #faf5ff;
+  --modal-bg: #ffffff;
+  --modal-input-bg: #faf5ff;
+  --search-area-bg: #faf5ff;
+  --message-box-hover: #f3e8ff;
+  --message-box-border: rgba(147, 51, 234, 0.15);
+  --button-bg: #9333ea;
+}
+
+.dark[data-preset="glow"],
+[data-preset="glow"].dark {
+  --app-container: #06020c;
+  --main-color: #faf5ff;
+  --secondary-color: #d8b4fe;
+  --primary: #c084fc;
+  --link-color: #d8b4fe;
+  --link-color-active-bg: #9333ea;
+  --projects-section: #10081d;
+  --inner-card-bg: #190e2b;
+  --modal-bg: #150a24;
+  --modal-input-bg: #0c0416;
+  --search-area-bg: #190e2b;
+  --message-box-hover: #24143d;
+  --message-box-border: rgba(192, 132, 252, 0.2);
+  --button-bg: #9333ea;
+}
+
+[data-preset="glow"] section,
+[data-preset="glow"] aside {
+  border: 1.5px solid rgba(147, 51, 234, 0.3) !important;
+  box-shadow: 0 0 30px rgba(147, 51, 234, 0.15) !important;
+}
+
+.dark[data-preset="glow"] section,
+.dark[data-preset="glow"] aside {
+  border: 1.5px solid rgba(192, 132, 252, 0.35) !important;
+  box-shadow: 0 0 45px rgba(192, 132, 252, 0.22) !important;
+}
+
+/* ========================================================================= */
+/* 4. RETRO PRESET (Harmonious Warm Neobrutalism)                            */
+/* ========================================================================= */
+[data-preset="retro"] {
+  --app-container: #fef08a;
+  --main-color: #18181b;
+  --secondary-color: #27272a;
+  --primary: #18181b;
+  --link-color: #18181b;
+  --link-color-active: #ffffff;
+  --link-color-active-bg: #18181b;
+  --projects-section: #ffffff;
+  --inner-card-bg: #fef9c3;
+  --modal-bg: #ffffff;
+  --modal-input-bg: #fef9c3;
+  --modal-border: #18181b;
+  --message-box-hover: #fef9c3;
+  --message-box-border: #18181b;
+  --button-bg: #18181b;
+  --search-area-bg: #ffffff;
+}
+
+.dark[data-preset="retro"],
+[data-preset="retro"].dark {
+  --app-container: #1c1917;
+  --main-color: #fafaf9;
+  --secondary-color: #e7e5e4;
+  --primary: #facc15;
+  --link-color: #fafaf9;
+  --link-color-active: #18181b;
+  --link-color-active-bg: #facc15;
+  --projects-section: #292524;
+  --inner-card-bg: #1c1917;
+  --modal-bg: #292524;
+  --modal-input-bg: #1c1917;
+  --modal-border: #facc15;
+  --message-box-hover: #35302d;
+  --message-box-border: #44403c;
+  --button-bg: #facc15;
+  --search-area-bg: #1c1917;
+}
+
+[data-preset="retro"] section,
+[data-preset="retro"] aside {
+  border: 2px solid #18181b !important;
+  box-shadow: 4px 4px 0px 0px #18181b !important;
+}
+
+.dark[data-preset="retro"] section,
+.dark[data-preset="retro"] aside {
+  border: 2px solid #facc15 !important;
+  box-shadow: 4px 4px 0px 0px #facc15 !important;
+}
+
+/* ========================================================================= */
+/* GLOBAL BASE & SMOOTH TRANSITIONS                                         */
+/* ========================================================================= */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--app-container);
+  color: var(--main-color);
+  overflow: hidden;
+  transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+section, aside, header, div {
+  transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom smooth scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* ✦ Premium Circular Theme Transition Animation ✦ */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 99999;
+}

@@ -1,0 +1,183 @@
+import { Project, ClientMessage } from '../types/dashboard'
+
+export const initialProjects: Project[] = [
+  {
+    id: 'p-1',
+    date: 'December 10, 2020',
+    title: 'Web Designing',
+    category: 'Prototyping',
+    progress: 60,
+    progressBarColor: '#ff942e',
+    cardBgColor: '#fee4cb',
+    daysLeft: '2 Days Left',
+    statusColor: '#ff942e',
+    status: 'in-progress',
+    participants: [
+      {
+        id: 'user-1',
+        name: 'Sarah',
+        avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&h=120&fit=crop&q=80',
+      },
+      {
+        id: 'user-2',
+        name: 'Alex',
+        avatar: 'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?w=120&h=120&fit=crop&q=80',
+      },
+    ],
+  },
+  {
+    id: 'p-2',
+    date: 'December 10, 2020',
+    title: 'Testing',
+    category: 'Prototyping',
+    progress: 50,
+    progressBarColor: '#4f3ff0',
+    cardBgColor: '#e9e7fd',
+    daysLeft: '2 Days Left',
+    statusColor: '#4f3ff0',
+    status: 'in-progress',
+    participants: [
+      {
+        id: 'user-3',
+        name: 'Emily',
+        avatar: 'https://images.unsplash.com/photo-1596815064285-45ed8a9c0463?w=120&h=120&fit=crop&q=80',
+      },
+      {
+        id: 'user-4',
+        name: 'John',
+        avatar: 'https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=120&h=120&fit=crop&q=80',
+      },
+    ],
+  },
+  {
+    id: 'p-3',
+    date: 'December 10, 2020',
+    title: 'Svg Animations',
+    category: 'Prototyping',
+    progress: 80,
+    progressBarColor: '#096c86',
+    cardBgColor: '#dbf6fd',
+    daysLeft: '2 Days Left',
+    statusColor: '#096c86',
+    status: 'in-progress',
+    participants: [
+      {
+        id: 'user-5',
+        name: 'Chloe',
+        avatar: 'https://images.unsplash.com/photo-1587628604439-3b9a0aa7a163?w=120&h=120&fit=crop&q=80',
+      },
+      {
+        id: 'user-3',
+        name: 'Emily',
+        avatar: 'https://images.unsplash.com/photo-1596815064285-45ed8a9c0463?w=120&h=120&fit=crop&q=80',
+      },
+    ],
+  },
+  {
+    id: 'p-4',
+    date: 'December 10, 2020',
+    title: 'UI Development',
+    category: 'Prototyping',
+    progress: 20,
+    progressBarColor: '#df3670',
+    cardBgColor: '#ffd3e2',
+    daysLeft: '2 Days Left',
+    statusColor: '#df3670',
+    status: 'upcoming',
+    participants: [
+      {
+        id: 'user-6',
+        name: 'Michael',
+        avatar: 'https://images.unsplash.com/photo-1600486913747-55e5470d6f40?w=120&h=120&fit=crop&q=80',
+      },
+      {
+        id: 'user-5',
+        name: 'Chloe',
+        avatar: 'https://images.unsplash.com/photo-1587628604439-3b9a0aa7a163?w=120&h=120&fit=crop&q=80',
+      },
+    ],
+  },
+  {
+    id: 'p-5',
+    date: 'December 10, 2020',
+    title: 'Data Analysis',
+    category: 'Prototyping',
+    progress: 60,
+    progressBarColor: '#34c471',
+    cardBgColor: '#c8f7dc',
+    daysLeft: '2 Days Left',
+    statusColor: '#34c471',
+    status: 'in-progress',
+    participants: [
+      {
+        id: 'user-1',
+        name: 'Sarah',
+        avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&h=120&fit=crop&q=80',
+      },
+      {
+        id: 'user-2',
+        name: 'Alex',
+        avatar: 'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?w=120&h=120&fit=crop&q=80',
+      },
+    ],
+  },
+  {
+    id: 'p-6',
+    date: 'December 10, 2020',
+    title: 'Web Designing',
+    category: 'Prototyping',
+    progress: 40,
+    progressBarColor: '#4067f9',
+    cardBgColor: '#d5deff',
+    daysLeft: '2 Days Left',
+    statusColor: '#4067f9',
+    status: 'in-progress',
+    participants: [
+      {
+        id: 'user-6',
+        name: 'Michael',
+        avatar: 'https://images.unsplash.com/photo-1600486913747-55e5470d6f40?w=120&h=120&fit=crop&q=80',
+      },
+      {
+        id: 'user-4',
+        name: 'John',
+        avatar: 'https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=120&h=120&fit=crop&q=80',
+      },
+    ],
+  },
+]
+
+export const initialMessages: ClientMessage[] = [
+  {
+    id: 'msg-1',
+    name: 'Stephanie',
+    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&h=120&fit=crop&q=80',
+    message: 'I got your first assignment. It was quite good. 🥳 We can continue with the next assignment.',
+    time: 'Dec, 12',
+    isStarred: true,
+  },
+  {
+    id: 'msg-2',
+    name: 'Mark',
+    avatar: 'https://images.unsplash.com/photo-1600486913747-55e5470d6f40?w=120&h=120&fit=crop&q=80',
+    message: "Hey, can tell me about progress of project? I'm waiting for your response.",
+    time: 'Dec, 12',
+    isStarred: false,
+  },
+  {
+    id: 'msg-3',
+    name: 'David',
+    avatar: 'https://images.unsplash.com/photo-1543965170-4c01a586684e?w=120&h=120&fit=crop&q=80',
+    message: 'Awesome! 🤩 I like it. We can schedule a meeting for the next one.',
+    time: 'Dec, 12',
+    isStarred: false,
+  },
+  {
+    id: 'msg-4',
+    name: 'Jessica',
+    avatar: 'https://images.unsplash.com/photo-1533993192821-2cce3a8267d1?w=120&h=120&fit=crop&q=80',
+    message: "I am really impressed! Can't wait to see the final result.",
+    time: 'Dec, 11',
+    isStarred: false,
+  },
+]
