@@ -199,72 +199,124 @@
 }
 
 /* ========================================================================= */
-/* 4. RETRO PRESET (80s Retro Arcade Synthwave: Rose Quartz / Midnight Neon)  */
+/* 4. RETRO PRESET (Harmonious Vintage Parchment & Crisp Neobrutalism)       */
 /* ========================================================================= */
 [data-preset="retro"] {
-  --app-container: #fff1f2; /* Soft Rose-Quartz Arcade Glow */
-  --main-color: #12111a;
-  --secondary-color: #4c465b;
-  --primary: #f43f5e; /* Hot Coral / Neon Crimson */
+  --app-container: #f5efe6; /* Warm Parchment Atmosphere */
+  --main-color: #1a1715;
+  --secondary-color: #5c5652;
+  --primary: #d97706; /* Warm Amber */
   --primary-foreground: #ffffff;
-  --link-color: #12111a;
+  --link-color: #1a1715;
   --link-color-active: #ffffff;
-  --link-color-active-bg: #f43f5e;
+  --link-color-active-bg: #1a1715;
   --projects-section: #ffffff; /* Crisp Pure White Canvas */
-  --inner-card-bg: #fff8f8; /* Soft Blush Interior */
+  --inner-card-bg: #faf7f2; /* Warm Crisp White Card Background */
   --modal-bg: #ffffff;
-  --modal-input-bg: #fff1f2;
-  --modal-border: #12111a;
-  --message-box-hover: #ffe4e6;
-  --message-box-border: #12111a;
-  --button-bg: #f43f5e;
+  --modal-input-bg: #faf7f2;
+  --modal-border: #1a1715;
+  --message-box-hover: #f5efe6;
+  --message-box-border: #1a1715;
+  --button-bg: #1a1715;
   --search-area-bg: #ffffff;
-  --border: #12111a;
-  --card: #fff8f8;
-  --card-foreground: #12111a;
+  --border: #1a1715;
+  --card: #faf7f2;
+  --card-foreground: #1a1715;
 }
 
 .dark[data-preset="retro"],
 [data-preset="retro"].dark {
-  --app-container: #0d0c14; /* Deep Midnight Arcade Charcoal */
-  --main-color: #fdf2f8;
-  --secondary-color: #9d95b2;
-  --primary: #fb7185; /* Electric Hot Coral / Neon Rose */
-  --primary-foreground: #0d0c14;
-  --link-color: #fdf2f8;
-  --link-color-active: #0d0c14;
-  --link-color-active-bg: #fb7185;
-  --projects-section: #151322; /* Solid Midnight Synthwave Canvas */
-  --inner-card-bg: #1c192e; /* Midnight Violet-Charcoal Card Interior */
-  --modal-bg: #151322;
-  --modal-input-bg: #0d0c14;
-  --modal-border: #fb7185;
-  --message-box-hover: #24203b;
-  --message-box-border: #fb7185;
-  --button-bg: #fb7185;
-  --search-area-bg: #0d0c14;
-  --border: #fb7185;
-  --card: #1c192e;
-  --card-foreground: #fdf2f8;
+  --app-container: #12100e; /* Deep Roasted Espresso Noir */
+  --main-color: #faf7f2;
+  --secondary-color: #a8a095;
+  --primary: #f59e0b; /* Golden Amber */
+  --primary-foreground: #12100e;
+  --link-color: #faf7f2;
+  --link-color-active: #12100e;
+  --link-color-active-bg: #f59e0b;
+  --projects-section: #1a1715; /* Solid Espresso Canvas */
+  --inner-card-bg: #23201d; /* Solid Dark Espresso Cards */
+  --modal-bg: #1a1715;
+  --modal-input-bg: #12100e;
+  --modal-border: #faf7f2;
+  --message-box-hover: #2c2825;
+  --message-box-border: #faf7f2;
+  --button-bg: #f59e0b;
+  --search-area-bg: #12100e;
+  --border: #faf7f2;
+  --card: #23201d;
+  --card-foreground: #faf7f2;
 }
 
-/* Retro Structural Containers & Inner Cards: Consistent 2px Borders & 4px Dropshadows */
+/* Retro Structural Containers & Cards: Solid 2px Borders with 4px Dropshadows */
 [data-preset="retro"] section,
 [data-preset="retro"] aside,
 [data-preset="retro"] .bg-\[var\(--projects-section\)\],
 [data-preset="retro"] .bg-\[var\(--inner-card-bg\)\] {
-  border: 2px solid #12111a !important;
-  box-shadow: 4px 4px 0px 0px #12111a !important;
-  border-radius: 14px !important;
+  border: 2px solid #1a1715 !important;
+  box-shadow: 4px 4px 0px 0px #1a1715 !important;
+  border-radius: 12px !important;
 }
 
 .dark[data-preset="retro"] section,
 .dark[data-preset="retro"] aside,
 .dark[data-preset="retro"] .bg-\[var\(--projects-section\)\],
 .dark[data-preset="retro"] .bg-\[var\(--inner-card-bg\)\] {
-  border: 2px solid #fb7185 !important;
-  box-shadow: 4px 4px 0px 0px #fb7185 !important;
-  border-radius: 14px !important;
+  border: 2px solid #faf7f2 !important;
+  box-shadow: 4px 4px 0px 0px #faf7f2 !important;
+  border-radius: 12px !important;
+}
+
+/* Retro Inner Project Cards (Grid & List Mode) Matching Borders & Solid Background */
+[data-preset="retro"] .group.rounded-\[30px\] {
+  border: 2px solid #1a1715 !important;
+  box-shadow: 3.5px 3.5px 0px 0px #1a1715 !important;
+  border-radius: 12px !important;
+  background-color: var(--inner-card-bg) !important;
+}
+[data-preset="retro"] .group.rounded-\[30px\]:hover {
+  transform: translate(-1.5px, -1.5px) !important;
+  box-shadow: 5px 5px 0px 0px #1a1715 !important;
+}
+
+.dark[data-preset="retro"] .group.rounded-\[30px\] {
+  border: 2px solid #faf7f2 !important;
+  box-shadow: 3.5px 3.5px 0px 0px #faf7f2 !important;
+  border-radius: 12px !important;
+  background-color: var(--inner-card-bg) !important;
+}
+.dark[data-preset="retro"] .group.rounded-\[30px\]:hover {
+  transform: translate(-1.5px, -1.5px) !important;
+  box-shadow: 5px 5px 0px 0px #faf7f2 !important;
+}
+
+/* Retro List Mode Cards */
+[data-preset="retro"] .cursor-pointer.rounded-2xl {
+  border: 2px solid #1a1715 !important;
+  box-shadow: 3px 3px 0px 0px #1a1715 !important;
+  border-radius: 10px !important;
+  background-color: var(--inner-card-bg) !important;
+}
+.dark[data-preset="retro"] .cursor-pointer.rounded-2xl {
+  border: 2px solid #faf7f2 !important;
+  box-shadow: 3px 3px 0px 0px #faf7f2 !important;
+  border-radius: 10px !important;
+  background-color: var(--inner-card-bg) !important;
+}
+
+/* Retro Inner Card Elements (Badges, Progress, Buttons) */
+[data-preset="retro"] .group.rounded-\[30px\] .rounded-full,
+[data-preset="retro"] .cursor-pointer.rounded-2xl .rounded-full {
+  border: 1.5px solid #1a1715 !important;
+  border-radius: 6px !important;
+  box-shadow: 1.5px 1.5px 0px 0px #1a1715 !important;
+}
+
+.dark[data-preset="retro"] .group.rounded-\[30px\] .rounded-full,
+.dark[data-preset="retro"] .cursor-pointer.rounded-2xl .rounded-full {
+  border: 1.5px solid #faf7f2 !important;
+  border-radius: 6px !important;
+  box-shadow: 1.5px 1.5px 0px 0px #faf7f2 !important;
 }
 
 /* Retro Inner Elements & Radius Harmonization */
@@ -278,17 +330,17 @@
 [data-preset="retro"] input,
 [data-preset="retro"] .search-wrapper,
 [data-preset="retro"] select {
-  border: 2px solid #12111a !important;
+  border: 2px solid #1a1715 !important;
   border-radius: 8px !important;
-  box-shadow: 2px 2px 0px 0px #12111a !important;
+  box-shadow: 2px 2px 0px 0px #1a1715 !important;
 }
 
 .dark[data-preset="retro"] input,
 .dark[data-preset="retro"] .search-wrapper,
 .dark[data-preset="retro"] select {
-  border: 2px solid #fb7185 !important;
+  border: 2px solid #faf7f2 !important;
   border-radius: 8px !important;
-  box-shadow: 2px 2px 0px 0px #fb7185 !important;
+  box-shadow: 2px 2px 0px 0px #faf7f2 !important;
 }
 
 [data-preset="retro"] button {
@@ -296,7 +348,7 @@
 }
 
 /* ========================================================================= */
-/* GLOBAL BASE & SMOOTH TRANSITIONS                                         */
+/* BUTTERY SMOOTH GLOBAL TRANSITIONS & VIEW TRANSITION ENGINE                */
 /* ========================================================================= */
 * {
   box-sizing: border-box;
@@ -311,15 +363,16 @@ html, body {
   background-color: var(--app-container);
   color: var(--main-color);
   overflow: hidden;
-  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-              color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-section, aside, header, div {
-  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-              border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-              color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+/* Smooth interpolation on theme switch and preset switch */
+html, body, section, aside, header, div, input, button, select, p, span, h1, h2, h3, h4, h5, h6, svg {
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              fill 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              stroke 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Custom smooth scrollbars */
