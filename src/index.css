@@ -199,53 +199,53 @@
 }
 
 /* ========================================================================= */
-/* 4. RETRO PRESET (Retro Classic Denim: Ice-Blue Light / Midnight Navy Dark)*/
+/* 4. RETRO PRESET (80s Retro Arcade Synthwave: Rose Quartz / Midnight Neon)  */
 /* ========================================================================= */
 [data-preset="retro"] {
-  --app-container: #dbeafe; /* Vintage Ice-Blue Frame */
-  --main-color: #0f172a;
-  --secondary-color: #334155;
-  --primary: #2563eb; /* Classic Royal Denim Blue */
+  --app-container: #fff1f2; /* Soft Rose-Quartz Arcade Glow */
+  --main-color: #12111a;
+  --secondary-color: #4c465b;
+  --primary: #f43f5e; /* Hot Coral / Neon Crimson */
   --primary-foreground: #ffffff;
-  --link-color: #0f172a;
+  --link-color: #12111a;
   --link-color-active: #ffffff;
-  --link-color-active-bg: #2563eb;
-  --projects-section: #ffffff; /* Crisp White Workspace Canvas */
-  --inner-card-bg: #eff6ff; /* Soft Subtle Denim Frost Card Interior */
+  --link-color-active-bg: #f43f5e;
+  --projects-section: #ffffff; /* Crisp Pure White Canvas */
+  --inner-card-bg: #fff8f8; /* Soft Blush Interior */
   --modal-bg: #ffffff;
-  --modal-input-bg: #eff6ff;
-  --modal-border: #0f172a;
-  --message-box-hover: #dbeafe;
-  --message-box-border: #0f172a;
-  --button-bg: #0f172a;
+  --modal-input-bg: #fff1f2;
+  --modal-border: #12111a;
+  --message-box-hover: #ffe4e6;
+  --message-box-border: #12111a;
+  --button-bg: #f43f5e;
   --search-area-bg: #ffffff;
-  --border: #0f172a;
-  --card: #eff6ff;
-  --card-foreground: #0f172a;
+  --border: #12111a;
+  --card: #fff8f8;
+  --card-foreground: #12111a;
 }
 
 .dark[data-preset="retro"],
 [data-preset="retro"].dark {
-  --app-container: #0b1120; /* Deep Midnight Ink Navy */
-  --main-color: #f8fafc;
-  --secondary-color: #94a3b8;
-  --primary: #38bdf8; /* Electric Sky Blue Accent */
-  --primary-foreground: #0b1120;
-  --link-color: #f8fafc;
-  --link-color-active: #0b1120;
-  --link-color-active-bg: #38bdf8;
-  --projects-section: #111b2e; /* Deep Midnight Denim Canvas */
-  --inner-card-bg: #16243b; /* Dark Navy Card Interior */
-  --modal-bg: #111b2e;
-  --modal-input-bg: #0b1120;
-  --modal-border: #60a5fa;
-  --message-box-hover: #1e314f;
-  --message-box-border: #60a5fa;
-  --button-bg: #38bdf8;
-  --search-area-bg: #0b1120;
-  --border: #60a5fa;
-  --card: #16243b;
-  --card-foreground: #f8fafc;
+  --app-container: #0d0c14; /* Deep Midnight Arcade Charcoal */
+  --main-color: #fdf2f8;
+  --secondary-color: #9d95b2;
+  --primary: #fb7185; /* Electric Hot Coral / Neon Rose */
+  --primary-foreground: #0d0c14;
+  --link-color: #fdf2f8;
+  --link-color-active: #0d0c14;
+  --link-color-active-bg: #fb7185;
+  --projects-section: #151322; /* Solid Midnight Synthwave Canvas */
+  --inner-card-bg: #1c192e; /* Midnight Violet-Charcoal Card Interior */
+  --modal-bg: #151322;
+  --modal-input-bg: #0d0c14;
+  --modal-border: #fb7185;
+  --message-box-hover: #24203b;
+  --message-box-border: #fb7185;
+  --button-bg: #fb7185;
+  --search-area-bg: #0d0c14;
+  --border: #fb7185;
+  --card: #1c192e;
+  --card-foreground: #fdf2f8;
 }
 
 /* Retro Structural Containers & Inner Cards: Consistent 2px Borders & 4px Dropshadows */
@@ -253,8 +253,8 @@
 [data-preset="retro"] aside,
 [data-preset="retro"] .bg-\[var\(--projects-section\)\],
 [data-preset="retro"] .bg-\[var\(--inner-card-bg\)\] {
-  border: 2px solid #0f172a !important;
-  box-shadow: 4px 4px 0px 0px #0f172a !important;
+  border: 2px solid #12111a !important;
+  box-shadow: 4px 4px 0px 0px #12111a !important;
   border-radius: 14px !important;
 }
 
@@ -262,8 +262,8 @@
 .dark[data-preset="retro"] aside,
 .dark[data-preset="retro"] .bg-\[var\(--projects-section\)\],
 .dark[data-preset="retro"] .bg-\[var\(--inner-card-bg\)\] {
-  border: 2px solid #60a5fa !important;
-  box-shadow: 4px 4px 0px 0px #60a5fa !important;
+  border: 2px solid #fb7185 !important;
+  box-shadow: 4px 4px 0px 0px #fb7185 !important;
   border-radius: 14px !important;
 }
 
@@ -278,17 +278,17 @@
 [data-preset="retro"] input,
 [data-preset="retro"] .search-wrapper,
 [data-preset="retro"] select {
-  border: 2px solid #0f172a !important;
+  border: 2px solid #12111a !important;
   border-radius: 8px !important;
-  box-shadow: 2px 2px 0px 0px #0f172a !important;
+  box-shadow: 2px 2px 0px 0px #12111a !important;
 }
 
 .dark[data-preset="retro"] input,
 .dark[data-preset="retro"] .search-wrapper,
 .dark[data-preset="retro"] select {
-  border: 2px solid #60a5fa !important;
+  border: 2px solid #fb7185 !important;
   border-radius: 8px !important;
-  box-shadow: 2px 2px 0px 0px #60a5fa !important;
+  box-shadow: 2px 2px 0px 0px #fb7185 !important;
 }
 
 [data-preset="retro"] button {
