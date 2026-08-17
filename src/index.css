@@ -199,57 +199,98 @@
 }
 
 /* ========================================================================= */
-/* 4. RETRO PRESET (Harmonious Warm Neobrutalism)                            */
+/* 4. RETRO PRESET (Harmonious Warm Stone Neo-Brutalist — NO YELLOW)         */
 /* ========================================================================= */
 [data-preset="retro"] {
-  --app-container: #fef08a;
-  --main-color: #18181b;
-  --secondary-color: #27272a;
-  --primary: #18181b;
-  --link-color: #18181b;
+  --app-container: #eae6dd;
+  --main-color: #17171a;
+  --secondary-color: #52504c;
+  --primary: #d97706;
+  --link-color: #17171a;
   --link-color-active: #ffffff;
-  --link-color-active-bg: #18181b;
-  --projects-section: #ffffff;
-  --inner-card-bg: #fef9c3;
+  --link-color-active-bg: #17171a;
+  --projects-section: #fcfbf8;
+  --inner-card-bg: #ffffff;
   --modal-bg: #ffffff;
-  --modal-input-bg: #fef9c3;
-  --modal-border: #18181b;
-  --message-box-hover: #fef9c3;
-  --message-box-border: #18181b;
-  --button-bg: #18181b;
+  --modal-input-bg: #f5f2eb;
+  --modal-border: #17171a;
+  --message-box-hover: #f5f2eb;
+  --message-box-border: #17171a;
+  --button-bg: #17171a;
   --search-area-bg: #ffffff;
+  --border: #17171a;
+  --card: #ffffff;
+  --card-foreground: #17171a;
 }
 
 .dark[data-preset="retro"],
 [data-preset="retro"].dark {
-  --app-container: #1c1917;
-  --main-color: #fafaf9;
-  --secondary-color: #e7e5e4;
-  --primary: #facc15;
-  --link-color: #fafaf9;
-  --link-color-active: #18181b;
-  --link-color-active-bg: #facc15;
-  --projects-section: #292524;
-  --inner-card-bg: #1c1917;
-  --modal-bg: #292524;
-  --modal-input-bg: #1c1917;
-  --modal-border: #facc15;
-  --message-box-hover: #35302d;
-  --message-box-border: #44403c;
-  --button-bg: #facc15;
-  --search-area-bg: #1c1917;
+  --app-container: #131211;
+  --main-color: #f7f4ed;
+  --secondary-color: #a8a39a;
+  --primary: #f59e0b;
+  --link-color: #f7f4ed;
+  --link-color-active: #131211;
+  --link-color-active-bg: #f59e0b;
+  --projects-section: #1c1a18;
+  --inner-card-bg: #272522;
+  --modal-bg: #1c1a18;
+  --modal-input-bg: #131211;
+  --modal-border: #f7f4ed;
+  --message-box-hover: #2e2b27;
+  --message-box-border: #f7f4ed;
+  --button-bg: #f59e0b;
+  --search-area-bg: #131211;
+  --border: #f7f4ed;
+  --card: #272522;
+  --card-foreground: #f7f4ed;
 }
 
+/* Retro Structural Containers & Inner Cards: Consistent Borders & Dropshadows */
 [data-preset="retro"] section,
-[data-preset="retro"] aside {
-  border: 2px solid #18181b !important;
-  box-shadow: 4px 4px 0px 0px #18181b !important;
+[data-preset="retro"] aside,
+[data-preset="retro"] .bg-\[var\(--projects-section\)\],
+[data-preset="retro"] .bg-\[var\(--inner-card-bg\)\] {
+  border: 2px solid #17171a !important;
+  box-shadow: 4px 4px 0px 0px #17171a !important;
+  border-radius: 12px !important;
 }
 
 .dark[data-preset="retro"] section,
-.dark[data-preset="retro"] aside {
-  border: 2px solid #facc15 !important;
-  box-shadow: 4px 4px 0px 0px #facc15 !important;
+.dark[data-preset="retro"] aside,
+.dark[data-preset="retro"] .bg-\[var\(--projects-section\)\],
+.dark[data-preset="retro"] .bg-\[var\(--inner-card-bg\)\] {
+  border: 2px solid #f7f4ed !important;
+  box-shadow: 4px 4px 0px 0px #f7f4ed !important;
+  border-radius: 12px !important;
+}
+
+/* Retro Inner Elements & Radius Harmonization */
+[data-preset="retro"] .rounded-\[26px\],
+[data-preset="retro"] .rounded-\[32px\],
+[data-preset="retro"] .rounded-3xl,
+[data-preset="retro"] .rounded-2xl {
+  border-radius: 12px !important;
+}
+
+[data-preset="retro"] input,
+[data-preset="retro"] .search-wrapper,
+[data-preset="retro"] select {
+  border: 2px solid #17171a !important;
+  border-radius: 8px !important;
+  box-shadow: 2px 2px 0px 0px #17171a !important;
+}
+
+.dark[data-preset="retro"] input,
+.dark[data-preset="retro"] .search-wrapper,
+.dark[data-preset="retro"] select {
+  border: 2px solid #f7f4ed !important;
+  border-radius: 8px !important;
+  box-shadow: 2px 2px 0px 0px #f7f4ed !important;
+}
+
+[data-preset="retro"] button {
+  border-radius: 8px !important;
 }
 
 /* ========================================================================= */
@@ -268,15 +309,15 @@ html, body {
   background-color: var(--app-container);
   color: var(--main-color);
   overflow: hidden;
-  transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-              color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 section, aside, header, div {
-  transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-              border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-              color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Custom smooth scrollbars */
